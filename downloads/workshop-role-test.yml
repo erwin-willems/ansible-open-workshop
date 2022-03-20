@@ -5,10 +5,10 @@
 
   vars:
     account_groups:
-      - name: "workshop"
+    - name: "workshop"
     account_users:
-      - name: "workshop"
-        password: "$6$uj/GXuBze4eetOeT$ksVseNMTnsRdkVFqUyhlDurXWsTkAOdPuSNOPJtPNnzkmrXzfx753hglmH5M/"
+    - name: "workshop"
+      password: "$6$uj/GXuBze4eetOeT$ksVseNMTnsRdkVFqUyhlDurXWsTkAOdPuSNOPJtPNnzkmrXzfx753hglmH5M/"
 
   roles:
     - role: ontic.account
