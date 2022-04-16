@@ -16,19 +16,18 @@ Om Ansible goed te kunnen laten werken is het nodig om dependancies te installer
         name: "{{ packages }}"
       vars:
         packages:
-        - python-pip
         - ieee-data
-        - python-netaddr
-        - python-kerberos
-        - python-selinux
-        - python-xmltodict
-        - python-httplib2
-        - python-jinja2
-        - python-yaml
-        - python-paramiko
-        - python-cryptography
-        - python-setuptools
-        - python-pip
+        - python3-pip
+        - python3-netaddr
+        - python3-kerberos
+        - python3-selinux
+        - python3-xmltodict
+        - python3-httplib2
+        - python3-jinja2
+        - python3-yaml
+        - python3-paramiko
+        - python3-cryptography
+        - python3-setuptools
         - sshpass
         - git
           
@@ -45,6 +44,7 @@ Om Ansible goed te kunnen laten werken is het nodig om dependancies te installer
 
 **Het playbook faalt:**
 
+TODO: Update this result:
 ```
 TASK [Install a list of packages] **********************************************************************************************
 fatal: [pi]: FAILED! => {"cache_update_time": 1549370348, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get
@@ -94,7 +94,7 @@ Ansible heeft een ``pip`` module. Deze module kan Ansible installeren via Pip.
     - name: "Ensure ansible is installed"
       pip:
         name: ansible
-        version: "2.9"
+        version: "2.9.27"
   ```
 
 **Tip:** Controleer altijd de handleiding van Ansible om je playbook nog slimmer te maken. Voor de gebruikte ``pip`` module staat deze op: https://docs.ansible.com/ansible/latest/modules/pip_module.html. In deze stap gebruiken we de parameter ``version`` om een specifieke versie te selecteren om via pip te installeren.
